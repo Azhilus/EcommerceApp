@@ -1,5 +1,7 @@
+import 'package:ecomapp/themes/light_mode.dart';
 import 'package:flutter/material.dart';
 import '/pages/intro_page.dart';
+import '/pages/shop_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,9 +12,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: IntroPage(),
-    );
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: const IntroPage(),
+        theme: lightMode,
+        routes: {
+          '/intro_page': (context) => const IntroPage(),
+          '/shop_page': (context) => const ShopPage(),
+        });
   }
 }
