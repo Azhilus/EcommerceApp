@@ -9,18 +9,17 @@ class MyListTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      leading: Icon(
-        icon,
-        color: Theme.of(context).colorScheme.inversePrimary,
-      ),
-      title: Text(
-        'Shop',
-        style: TextStyle(
-          color: Theme.of(context).colorScheme.inversePrimary,
+    return Padding(
+      padding: const EdgeInsets.only(left: 25.0),
+      child: ListTile(
+        leading: Icon(
+          icon,
+          color: Colors.grey,
         ),
+        title: Padding(
+            padding: const EdgeInsets.only(left: 25.0), child: Text(text)),
+        onTap: onTap,
       ),
-      onTap: onTap,
     );
   }
 }
