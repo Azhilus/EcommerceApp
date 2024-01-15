@@ -1,6 +1,5 @@
 import 'product.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 class Shop extends ChangeNotifier {
   //products for sale
@@ -9,7 +8,8 @@ class Shop extends ChangeNotifier {
     Product(
       name: "Product 1",
       price: 99.99,
-      description: "Item Description",
+      description:
+          "Item Description. more description to describe the description of the described product",
     ),
     Product(
       name: "Product 2",
